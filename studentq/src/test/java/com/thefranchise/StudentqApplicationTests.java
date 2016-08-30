@@ -12,5 +12,5 @@ public class StudentqApplicationTests {
 	@Test
 	public void contextLoads() {
 	}
-
+	
 }
