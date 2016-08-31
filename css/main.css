@@ -1,0 +1,92 @@
+/**************
+Colors: 
+- light blue (on jumbotron, text color): 199bfd;
+- light grey (text on about section): E0E0E0;
+
+***************/
+
+/*************
+Base
+*************/
+p,a {
+  font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+
+}
+
+/**************
+Jumbotron
+***************/
+
+/* Deals with the jumbotron image */
+.jumbotron {
+  background-color: #fff;
+  margin:0;
+  padding:0;
+}
+
+/* Deals with the text on in the jumbotron image */
+.jumbotron .container {
+  position: relative;
+  text-align: center;
+  color:#199bfd;
+  padding-top: 30px;
+}
+
+.jumbotron .container h1 {
+  position: relative;
+  text-align: left;
+
+}
+
+.jumbotron .container img {
+    height:220px;
+}
+
+/**************
+About section
+***************/
+.about {
+  background-color: #199bfd;
+}
+/* Deals with the text on the about section */
+.about .container {
+  position: relative;
+  /*Needed to centre text*/
+  text-align: center;
+  color:#fff;
+  padding-top: 20px;
+}
+
+/*Text on about section of home page*/
+.jumbotron .about p {
+  font-size: 16px;
+  color:#E0E0E0;
+}
+
+.about .container img {
+  height:80px;
+  padding-bottom: 10px
+}
+/*Add space between about section header and picture/text blurbs*/
+.about .container .row {
+  margin-top: 40px;
+}
+
+/**************
+Navbar
+***************/
+
+.navbar a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+
+/*remove bottom shadow on nav*/
+.btn, .card, .chip, .dropdown-menu, .jumbotron, .list-group, .navbar, .pager li a, .pagination .active .page-link, .popover, .tag, .z-depth-1 {
+    box-shadow: none;
+}
