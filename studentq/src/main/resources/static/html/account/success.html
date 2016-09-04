@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Register New Student Account</title>
+</head>
+<body>
+
+
+	<p>Successfully registered..</p>
+	
+	<table>
+		<tr>
+			<td th:text="${account.userName}">				
+			</td>
+		</tr>
+		<tr>
+			<td th:text="${account.firstName}">				
+			</td>
+		</tr>
+		<tr>
+			<td th:text="${account.lastName}">				
+			</td>
+		</tr>
+		<tr>
+			<td th:text="${account.email}">				
+			</td>
+		</tr>
+		<tr>
+			<td th:text="${account.studentNumber}">				
+			</td>
+		</tr>
+	
+	</table>
+
+
+
+</body>
+</html>
