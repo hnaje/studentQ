@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1" />
-<title>Register New Student Account</title>
+<title th:utext="#{register.title}"></title>
 </head>
 <body>
 
@@ -11,7 +11,7 @@
 		<table cellpadding="2" cellspacing="2">
 
 			<tr>
-				<td>Student Number:</td>
+				<td th:utext="#{register.studentNumber}"></td>
 				<td>
 					<input type="text" th:field="*{studentNumber}" />
 				</td>
@@ -20,7 +20,7 @@
 
 			</tr>
 			<tr>
-				<td>Username:</td>
+				<td th:utext="#{register.username}"></td>
 				<td>
 					<input type="text" th:field="*{userName}" />
 				</td>
@@ -28,7 +28,7 @@
 
 			</tr>
 			<tr>
-				<td>Email:</td>
+				<td th:utext="#{register.email}"></td>
 				<td>
 					<input type="text" th:field="*{email}" />
 				</td>
@@ -36,7 +36,7 @@
 
 			</tr>
 			<tr>
-				<td>First Name:</td>
+				<td th:utext="#{register.firstName}"></td>
 				<td>
 					<input type="text" th:field="*{firstName}" />
 				</td>
@@ -45,7 +45,7 @@
 			</tr>
 			
 			<tr>
-				<td>Last Name:</td>
+				<td th:utext="#{register.lastName}"></td>
 				<td>
 					<input type="text" th:field="*{lastName}" />
 				</td>
@@ -54,7 +54,7 @@
 			</tr>
 			
 			<tr>
-				<td>Password:</td>
+				<td th:utext="#{register.password}"></td>
 				<td>
 					<input type="password" th:field="*{password}" />
 				</td>
