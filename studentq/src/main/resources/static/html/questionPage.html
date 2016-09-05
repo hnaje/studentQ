@@ -3,38 +3,46 @@
 <head>
 <style>
 table, td {
-    border: 1px solid black;
+	border: 1px solid black;
 }
 </style>
 <title>Question Page</title>
 </head>
 <body>
 
-<form th:action="@{/questionPage}" />
+	<form th:action="@{/questionPage}" >
+	Name: <input type="text" name="Name" value="" id="userInput"></input>
+	Question: <input type="text" name="Question" value="" id = "userQuestion"></input>
+</form>
+	<p>Got a question about the lecture? Ask here!</p>
 
-<p>Got a question about the lecture? Ask here!</p>
+	<button onclick="myFunction()">Ask Question</button>
 
-<table id="myTable">
-  <tr>
-    <td>Test Username</td>
-    <td>Test Question</td>
-  </tr>
+	<table id="myTable">
+	</table>
 
-</table>
-<br/>
 
-<button onclick="myFunction()">Ask Question</button>
 
-<script>
-function myFunction() {
-    var table = document.getElementById("myTable");
-    var row = table.insertRow(0);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    cell1.innerHTML = "Meesam";
-    cell2.innerHTML = "What is an electron?";
-}
-</script>
+	<br />
+
+
+	<script>
+	
+		function myFunction() {
+			var input = document.getElementById("userInput").value;
+			var question = document.getElementById("userQuestion").value; 
+			var table = document.getElementById("myTable");
+			var row = table.insertRow(0);
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(1);
+			var studentName = input;
+			var questionAsked = question;
+			cell1.innerHTML = studentName;
+			cell2.innerHTML = questionAsked;
+		}
+	</script>
+
+
 
 </body>
 </html>
