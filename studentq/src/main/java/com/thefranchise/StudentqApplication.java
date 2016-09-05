@@ -35,6 +35,7 @@ public class StudentqApplication extends WebMvcConfigurerAdapter {
 	    CookieLocaleResolver cookieLocaleResolver = new CookieLocaleResolver();
 	    return cookieLocaleResolver;
 	}
+	//
 	@Bean
 	public MessageSource messageSource() {
 	    ReloadableResourceBundleMessageSource messageSource = 
