@@ -23,6 +23,8 @@ public class StudentAccount {
 	@NotEmpty
 	private String email;
 	
+	private String test;
+	
 	public Integer getStudentNumber() {
 		return studentNumber;
 	}
