@@ -19,7 +19,7 @@ public class RegistrationController {
 	@RequestMapping(value="", method = RequestMethod.GET)
 	public String register(ModelMap modelMap){
 		modelMap.put("account", new StudentAccount());
-		return "html/account/register";
+		return "html/account/register_john";
 	}
 	
 	@RequestMapping(value="", method = RequestMethod.POST)
