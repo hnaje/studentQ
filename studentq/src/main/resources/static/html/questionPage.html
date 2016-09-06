@@ -10,39 +10,41 @@ table, td {
 </head>
 <body>
 
-	<form th:action="@{/questionPage}" >
-	Name: <input type="text" name="Name" value="" id="userInput"></input>
-	Question: <input type="text" name="Question" value="" id = "userQuestion"></input>
-</form>
-	<p>Got a question about the lecture? Ask here!</p>
+	<form onSubmit="return false" th:action="@{/questionPage}" >
+	
+	<p><h1>Got a question about the lecture? Ask here!</h1></p>
+	Question: <input type="text" name="Question" value="" id = "userQuestion" size = "100"></input>
+	</form>
 
-	<button onclick="myFunction()">Ask Question</button>
+	<br />
+	<button id = "button" onclick = "myFunction()" value= "enter" >Ask Question</button>
+	<br />
 
 	<table id="myTable">
 	</table>
-
-
-
+	
 	<br />
 
-
 	<script>
-	
 		function myFunction() {
-			var input = document.getElementById("userInput").value;
-			var question = document.getElementById("userQuestion").value; 
+			var question = document.getElementById("userQuestion").value;
 			var table = document.getElementById("myTable");
 			var row = table.insertRow(0);
 			var cell1 = row.insertCell(0);
-			var cell2 = row.insertCell(1);
-			var studentName = input;
 			var questionAsked = question;
-			cell1.innerHTML = studentName;
-			cell2.innerHTML = questionAsked;
-		}
+			cell1.innerHTML = questionAsked;
+			var question = document.getElementById("userQuestion").value= '';
+			}
+		
+		document.getElementById("userQuestion")
+	    .addEventListener("keyup", function(event) {
+	    event.preventDefault();
+	    if (event.keyCode == 13) {
+	        document.getElementById("button").click();
+	    }
+	});
+
 	</script>
-
-
 
 </body>
 </html>
