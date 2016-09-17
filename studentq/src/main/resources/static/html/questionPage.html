@@ -1,26 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-<style>
-table, td {
-	border: 1px solid black;
-}
-</style>
-<title>Question Page</title>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+
+
+<title th:utext="#{questionPage.title}"></title>
+
+
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+	th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css}" />
+
+<!-- Bootstrap core CSS -->
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+
+<!-- Material Design Bootstrap -->
+<link th:href="@{/css/mdb.min.css}" rel="stylesheet" />
+
+<!-- Your custom styles (optional) -->
+<link th:href="@{/css/questionPage.css}" rel="stylesheet" />
+
+
+<!-- Google Fonts -->
+<link
+	th:href="@{https://fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:300,700}"
+	rel="stylesheet" />
 </head>
 <body>
-	
-	<form onSubmit="return false" th:action="@{/questionPage}" >
-	<p><h1>Got a question about the lecture? Ask here!</h1></p>
-	Question: <input type="text" name="Question" value="" id = "userQuestion" size = "100"></input>
-	</form>
-	
-	<br />
-	<button id = "button" onclick = "myFunction()" value= "enter" >Ask Question</button>
-	<br />
 
-	<table id="myTable">
-	</table>
+	<div class ="askQuestionSection">
+		<form onSubmit="return false" th:action="@{/questionPage}" >
+		<p><h1>Got a question about the lecture? Ask here!</h1></p>
+		Question: <input type="text" name="Question" value="" id = "userQuestion" size = "100"></input>
+		</form>
+
+		<br />
+		<button class="btn btn-warning waves-effect btn-lg" id = "button" onclick = "myFunction()" value= "enter">Ask Question</button>
+		<br />
+	</div>
+
+	<div class = "questionForum">
+		<table id="myTable">
+		</table>
+	</div>
 	
 	<br />
 
