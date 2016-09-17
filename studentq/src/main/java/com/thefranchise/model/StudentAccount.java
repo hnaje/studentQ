@@ -21,7 +21,7 @@ public class StudentAccount {
 	@NotEmpty
 	private String userName;	
 	@NotEmpty
-	private String email;
+	private String email;	
 	
 	public Integer getStudentNumber() {
 		return studentNumber;
