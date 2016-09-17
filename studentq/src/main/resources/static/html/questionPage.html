@@ -9,13 +9,12 @@ table, td {
 <title>Question Page</title>
 </head>
 <body>
-
-	<form onSubmit="return false" th:action="@{/questionPage}" >
 	
+	<form onSubmit="return false" th:action="@{/questionPage}" >
 	<p><h1>Got a question about the lecture? Ask here!</h1></p>
 	Question: <input type="text" name="Question" value="" id = "userQuestion" size = "100"></input>
 	</form>
-
+	
 	<br />
 	<button id = "button" onclick = "myFunction()" value= "enter" >Ask Question</button>
 	<br />
@@ -28,6 +27,8 @@ table, td {
 	<script>
 		function myFunction() {
 			var question = document.getElementById("userQuestion").value;
+			if(document.getElementById("userQuestion").value == "")
+				return;
 			var table = document.getElementById("myTable");
 			var row = table.insertRow(0);
 			var cell1 = row.insertCell(0);
@@ -36,8 +37,7 @@ table, td {
 			var question = document.getElementById("userQuestion").value= '';
 			}
 		
-		document.getElementById("userQuestion")
-	    .addEventListener("keyup", function(event) {
+		document.getElementById("userQuestion").addEventListener("keyup", function(event) {
 	    event.preventDefault();
 	    if (event.keyCode == 13) {
 	        document.getElementById("button").click();
